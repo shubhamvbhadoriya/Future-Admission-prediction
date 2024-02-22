@@ -1,3 +1,4 @@
 pandas
 joblib 
 Flask
+scikit-learn==0.24.2
