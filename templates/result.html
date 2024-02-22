@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-semibold text-center mb-4">Predictions Result</h1>
+        <h2 class="text-xl font-semibold mb-2">Department: {{ department }}</h2>
+        <h2 class="text-xl font-semibold mb-2">Year: {{ year }}</h2>
+        <div class="grid grid-cols-2 gap-4">
+            {% for column, prediction in predictions.items() %}
+                <div class="border p-2 rounded">
+                    <h3 class="font-semibold">{{ column }}</h3>
+                    <p>{{ prediction }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
