@@ -34,4 +34,5 @@ def make_predictions_future_year(model, future_year):
     prediction = model.predict([[future_year]])
     columns = ['Total_Admission_Count', 'SC', 'GEN-EWS', 'ST', 'PwD', 'OBC', 'GEN', 'Navsari', 'Bardoli', 'Maroli', 'Surat', 'Chikhli', 'Bilimora', 'Valsad', 'Dharampur', 'Vapi', 'Other_Area']
     return {columns[i]: prediction[0][i] for i in range(len(columns))}
-
+if __name__ == '__main__':
+    app.run(debug=True)
